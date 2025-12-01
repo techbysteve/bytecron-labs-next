@@ -38,7 +38,7 @@ export function Navbar() {
             <GitHubLogoIcon className="h-5 w-5" />
           </Link>
           <Link
-            href="https://twitter.com/stevebobygeorge"
+            href="https://twitter.com/bytesbysteve"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/70 transition-colors hover:text-white active:text-white/60"
