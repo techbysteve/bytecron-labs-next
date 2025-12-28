@@ -29,7 +29,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-6">
           <Link
-            href="https://github.com/steve-cse"
+            href="https://github.com/techbysteve"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/70 transition-colors hover:text-white active:text-white/60"
@@ -38,7 +38,7 @@ export function Navbar() {
             <GitHubLogoIcon className="h-5 w-5" />
           </Link>
           <Link
-            href="https://twitter.com/bytesbysteve"
+            href="https://twitter.com/techbysteve"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/70 transition-colors hover:text-white active:text-white/60"
@@ -47,7 +47,7 @@ export function Navbar() {
             <TwitterLogoIcon className="h-5 w-5" />
           </Link>
           <Link
-            href="https://linkedin.com/in/steve-cse"
+            href="https://linkedin.com/in/steve-george-in"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/70 transition-colors hover:text-white active:text-white/60"
