@@ -39,9 +39,9 @@ export default async function TagsPage() {
           <Link
             key={tag}
             href={`/tags/${tag}`}
-            className="px-3 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors"
+            className="px-3 py-2 bg-neutral-800 text-neutral-300 rounded hover:bg-[#db0042] hover:text-white transition-colors"
           >
-            {tag} <span className="text-xs text-gray-500">({count})</span>
+            {tag} <span className="text-xs text-neutral-400">({count})</span>
           </Link>
         ))}
       </div>

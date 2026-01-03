@@ -40,7 +40,7 @@ async function getPosts() {
     .filter((post) => post.published);
 
   return posts.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
 }
 
@@ -74,7 +74,7 @@ export default async function Home() {
                   <Link
                     key={tag}
                     href={`/tags/${tag}`}
-                    className="px-2 py-1 bg-gray-200 text-gray-700 text-xs rounded hover:bg-gray-300 transition-colors"
+                    className="px-2 py-1 bg-neutral-800 text-neutral-300 text-xs rounded hover:bg-[#db0042] hover:text-white transition-colors"
                   >
                     {tag}
                   </Link>
