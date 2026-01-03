@@ -3,6 +3,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeKatex from "rehype-katex";
 import rehypePrettyCode from "rehype-pretty-code";
@@ -10,6 +11,7 @@ import remarkMath from "remark-math";
 import { CodeBlock } from "@/components/code-block";
 import { MDXImage } from "@/components/mdx-image";
 import { ScrambleText } from "@/components/scramble-text";
+import { CommentsSection } from "@/components/comments-section";
 
 type PostPageProps = {
   params: Promise<{
@@ -31,6 +33,27 @@ async function getPost(slug: string) {
   return {
     frontmatter: data,
     content,
+  };
+}
+
+export async function generateMetadata({
+  params,
+}: PostPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPost(slug);
+
+  if (!post) {
+    return {
+      title: "Post Not Found",
+    };
+  }
+
+  return {
+    title: post.frontmatter.title,
+    description: post.frontmatter.excerpt || post.frontmatter.description,
+    authors: post.frontmatter.author
+      ? [{ name: post.frontmatter.author }]
+      : undefined,
   };
 }
 
@@ -105,6 +128,8 @@ export default async function PostPage({ params }: PostPageProps) {
           }}
         />
       </div>
+
+      <CommentsSection />
     </article>
   );
 }
