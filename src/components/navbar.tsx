@@ -1,5 +1,3 @@
-"use client";
-
 import {
   EnvelopeClosedIcon,
   GitHubLogoIcon,
@@ -7,24 +5,17 @@ import {
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { getRandomSubtext } from "@/lib/utils";
 
 export function Navbar() {
-  const [randomSubtext, setRandomSubtext] = useState("");
-
-  useEffect(() => {
-    setRandomSubtext(getRandomSubtext());
-  }, []);
-
   return (
     <nav className="py-4">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex flex-col">
-          <span className="text-2xl  font-bold  text-[#db0042]">
-            Bytecron Labs
+        <Link href="/" className="flex flex-col group">
+          <span className="flex items-center text-xl md:text-2xl font-bold pr-2 py-0.5 md:px-3 md:py-1">
+            <span className="text-[#db0042]">solo@coder</span>
+            <span className="text-white">:~$</span>
+            <span className="inline-block w-1.5 h-5 md:w-2 md:h-6 bg-[#db0042] ml-2 animate-blink"></span>
           </span>
-          <span className="text-sm text-white">{randomSubtext}</span>
         </Link>
 
         <div className="flex items-center gap-6">

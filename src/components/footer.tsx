@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="py-6 border-t border-white/10">
       <div className="container mx-auto px-4 text-center text-sm text-white/60">
         <p>
-          © {currentYear} Bytecron Labs | Powered by{" "}
+          © {currentYear} Solo Coder | Powered by{" "}
           <Link
             href="https://nextjs.org"
             target="_blank"

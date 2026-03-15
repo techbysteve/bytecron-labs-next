@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bytecron Labs",
+  title: "Solo Coder",
   description:
-    "Bytecron Labs is your go-to publication for thoughtful tech posts, coding tutorials, developer tools, and more.",
+    "Solo Coder is your go-to publication for thoughtful tech posts, coding tutorials, developer tools, and more.",
 };
 
 export default function RootLayout({

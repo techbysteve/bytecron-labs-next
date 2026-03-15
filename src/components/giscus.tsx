@@ -11,7 +11,7 @@ export default function GiscusComponent() {
       category="Announcements"
       categoryId="DIC_kwDOP8JXTM4C0hAH"
       mapping="title"
-      term="Welcome to bytecron labs!"
+      term="Welcome to Solo Coder!"
       reactionsEnabled="1"
       emitMetadata="0"
       inputPosition="top"
